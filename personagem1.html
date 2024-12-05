@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagem 1</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1C1C1C;
+            color: #EDEDED;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #241E2B;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #EDEDED;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #4F4F4F;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #EDEDED;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: #EDEDED;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #4F4F4F;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-top: 60px;
+            color: #EDEDED;
+        }
+        .description {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #CCCCCC;
+        }
+        .character-banner {
+            background-color: #241E2B;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .character-description, .character-attributes {
+            background-color: #241E2B;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .card {
+            background-color: #3A104F;
+            color: #EDEDED;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-button {
+            background-color: #D4AF37;
+            color: #241E2B;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #FFFFFF;
+            color: #241E2B;
+        }
+        .character-image {
+            width: 30%;
+            height: auto;
+            margin: 20px auto 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="elementos.html">Elementos</a>
+        <a href="mundo.html">Mundo</a>
+        <div class="dropdown">
+            <button class="dropbtn">Personagens</button>
+            <div class="dropdown-content">
+                <a href="personagem1.html">Personagem 1</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <img src="Imagens/cae45aa045e5b82b0fb3091a15f96fe1.jpg" alt="Personagem 1" class="character-image">
+        <div class="character-banner">
+            <div class="character-name">
+                <h1>Personagem 1</h1>
+                <p>Classe: Atacante | Origem: Paladium | Tipo: Corpo a Corpo</p>
+            </div>
+        </div>
+        <div class="character-description">
+            <p>Personagem 1 é um guardião da floresta, conhecido por sua bravura e habilidades mágicas. Ele protege a floresta de invasores e mantém o equilíbrio natural.</p>
+            <p>Com uma história rica e cheia de aventuras, Personagem 1 é um dos personagens mais respeitados no universo do RPG Wuitalur.</p>
+        </div>
+        <div class="character-attributes">
+            <div class="card">
+                <h3>Atributos Básicos</h3>
+                <ul>
+                    <li>Força: 80</li>
+                    <li>Resistência: 70</li>
+                    <li>Saúde: 90</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>Ataque Rápido: Dano físico em área</li>
+                    <li>Magia de Fogo: Dano mágico contínuo</li>
+                    <li>Controle da Natureza: Manipulação de plantas</li>
+                </ul>
+            </div>
+        </div>
+        <button class="back-button" onclick="history.back()">Voltar</button>
+    </div>
+    <footer>
+        <p>Créditos: Universo RPG Wuitalur</p>
+    </footer>
+</body>
+</html>

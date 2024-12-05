@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paladium: A Cidade da Justiça e da Luz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+     body {
+        color: #EDEDED;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+       }
+     .navbar {
+        background-color: #241E2B;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+       }
+     .navbar a {
+        float: left;
+        display: block;
+        color: #EDEDED;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+       }
+     .navbar a:hover {
+        background-color: #4F4F4F;
+       }
+     .dropdown {
+        float: left;
+        overflow: hidden;
+       }
+     .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #EDEDED;
+        padding: 14px 20px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+       }
+     .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #444;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       }
+     .main-text {
+        font-size: 24px; /* Altere o tamanho do texto aqui */
+         }
+        .card {
+        margin-bottom: 20px; /* Adicione esta linha para afastar o último card do final da página */
+        }
+ 
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1C1C1C;
+            color: #EDEDED;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #241E2B;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #EDEDED;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #4F4F4F;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #EDEDED;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: #EDEDED;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #4F4F4F;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 80px 20px;
+            margin-top: 60px;
+            flex: 1;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #FFD700; /* Cor do título ajustada */
+        }
+        .description {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #CCCCCC;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        .header {
+            position: relative;
+            height: auto;
+            padding: 100px 0;
+            text-align: center;
+            background-image: url('imagens/cidade_base.jpg'); /* Substitua pelo caminho correto da imagem */
+            background-size: cover;
+            background-position: center;
+            color: #F0F0F0;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .header h1 {
+            position: relative;
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #FFD700;
+            margin: 0;
+            padding: 10px 0;
+            overflow: visible;
+            white-space: nowrap;
+            z-index: 2;
+        }
+        .header p {
+            position: relative;
+            font-size: 1.2em;
+            color: #B89F5D;
+            z-index: 2;
+        }
+        .card {
+            background-color: #241E2B;
+            color: #EDEDED;
+            padding: 20px;
+            border-radius: 5px;
+            width: 40%; /* Ajuste o tamanho do card */
+            margin: 20px auto;
+            text-align: left;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #B8860B; /* Contorno fino dourado fosco */
+            position: relative;
+        }
+
+        .card-terceiro {
+           width: 39%; /* Ajuste a largura do terceiro card */
+           margin: -78px auto; /* Diminua a margem para reduzir o espaçamento entre os cards */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .arrow {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #FFD700; /* Cor da seta */
+            transition: opacity 0.3s;
+        }
+        .card:hover .arrow {
+            display: block;
+            animation: fadeIn 0.3s, moveArrow 1s infinite;
+        }
+        .card.open .arrow {
+            display: none;
+        }
+        .card-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .card.open .card-content {
+            display: block;
+            opacity: 1;
+        }
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            color: #EDEDED;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+        .footer-content {
+            padding: 20px 0;
+            text-align: center;
+            color: #EDEDED;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes moveArrow {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="elementos.html">Elementos</a>
+        <a href="mundo.html">Mundo</a>
+        <div class="dropdown">
+            <button class="dropbtn">Personagens</button>
+            <div class="dropdown-content">
+                <a href="personagem1.html">Personagem 1</a>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Paladium</h1>
+        <p>A Cidade da Luz</p>
+    </div>
+    <div class="content">
+        <img src="imagens/Paladium_Simbolo.png" alt="Paladium Simbolo" style="width: 250px; margin-bottom: 50px;">
+        <h1 class="title">Paladium: A Cidade da Justiça e da Luz</h1>
+        <p class="description">
+            Paladium é uma cidade magnífica e imponente, cujo esplendor arquitetônico reflete a grandiosidade e o poder de seu governo. Sua estrutura, marcada por enormes construções de mármore branco, com detalhes dourados que cintilam sob a luz do sol, exala um ar de magnificência. Cada edifício, cada praça, cada monumento foi projetado para simbolizar a força da cidade e o domínio da justiça que nela se faz cumprir. A luz do sol é uma presença constante, iluminando a cidade de uma forma que cria um cenário quase celestial, destacando a pureza e a busca incessante pela ordem.
+        </p>
+        <p class="description">
+            A cidade de Paladium é formada por um núcleo central próspero, com ruas largas, mercados luxuosos e grandes palácios. Aqui, a ordem reina suprema, e os cidadãos desfrutam de uma vida confortável, ao passo que as periferias da cidade revelam um lado mais sombrio, marcado por contrastes gritantes. À medida que se afastam da área central, os habitantes da periferia enfrentam dificuldades e desigualdade social, e o brilho dourado da cidade vai se apagando, dando lugar a sombras que denunciam a marginalização de muitos. Nesse cenário, reside uma grande tensão entre as classes sociais, que é constantemente alimentada pela ausência de soluções para os problemas dos mais pobres.
+        </p>
+        <div class="card" onclick="toggleCard(this)">
+            <h3>Estrutura Social e Política</h3>
+            <p>Clique para saber mais sobre a estrutura social e política de Paladium.</p>
+            <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+            <div class="card-content">
+                <p>
+                    A estrutura social e política de Paladium é marcada por uma divisão clara entre as classes dominantes e as áreas marginalizadas, refletindo tanto a prosperidade quanto as desigualdades profundas da cidade. A governança de Paladium é centralizada e controlada pela elite, com políticas rigorosas que regulam as classes e a distribuição de poder, além de um sistema de justiça implacável.
+                </p>
+                <p>
+                    A cidade está dividida entre o centro, onde vivem os mais privilegiados, e as periferias, que abrigam os cidadãos mais marginalizados. Enquanto o coração da cidade é próspero e moderno, as periferias sofrem com a pobreza, violência e negligência por parte das autoridades. Essa desigualdade cria um contraste visível na qualidade de vida entre os habitantes da cidade.
+                </p>
+                <p>
+                    A estrutura política de Paladium é composta principalmente pelos governantes, que exercem o poder com forte influência sobre as forças de segurança e as políticas públicas. O governo centralizado, controlado pela elite, mantém a ordem de forma autoritária, mas com uma grande dependência dos Cavaleiros de Paladium para manter o controle e a justiça nas ruas.
+                </p>
+                <h4><strong>- CAVALEIROS DE PALADIUM -</strong></h4>
+                <p>
+                    Os Cavaleiros de Paladium são a espinha dorsal da segurança da cidade e desempenham um papel crucial tanto na manutenção da ordem quanto na proteção dos cidadãos. Eles estão organizados em uma hierarquia de cinco ranks, cada um com suas responsabilidades e áreas de atuação.
+                </p>
+                <p>
+                    <strong>Ranks 1 a 3:</strong> Os cavaleiros desses ranks são responsáveis pela segurança interna da cidade e por missões locais. Eles patrulham as áreas urbanas, enfrentam pequenos conflitos e protegem a população de ameaças cotidianas. Esses cavaleiros são a linha de frente da defesa da cidade e são frequentemente vistos em todo o território de Paladium.
+                </p>
+                <p>
+                    <strong>Rank 4:</strong> Os cavaleiros de rank 4 lideram operações de alto risco. Eles são encarregados de missões mais complexas e perigosas, lidando com problemas que ameaçam a estabilidade da cidade de forma mais direta. Os cavaleiros desse rank são altamente respeitados, tanto pela habilidade em combate quanto pela competência estratégica.
+                </p>
+                <p>
+                    <strong>Rank 5 – Arautos Solares:</strong> Conhecidos como Arautos Solares, os cavaleiros desse rank são os mais poderosos e respeitados de Paladium. Eles são símbolos da justiça de Cadamor, com grande influência política e moral. Os Arautos Solares são considerados os guardiões da cidade, líderes espirituais e militares, e têm a responsabilidade de tomar decisões críticas em momentos de grande tensão. Sua presença é quase divina, e seus feitos são lendas vivas para os habitantes de Paladium.
+                </p>
+            </div>
+        </div>
+        <div class="card" onclick="toggleCard(this)">
+            <h3>Religião: O Culto a Cadamor</h3>
+            <p>Clique para saber mais sobre a religião em Paladium.</p>
+            <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+            <div class="card-content">
+                <p>
+                    A religião predominante em Paladium é o <strong>Culto a Cadamor</strong>, centrado na veneração de <strong>Cadamor</strong>, o Deus do Sol e da Justiça. Essa divindade é a personificação dos ideais de luz, verdade e equilíbrio, sendo considerada a guia espiritual e moral da sociedade.
+                </p>
+                <h4><strong>- CADAMOR: O DEUS DO SOL -</strong></h4>
+                <p>
+                    Cadamor é retratado como um <strong>centauro flamejante</strong>, com olhos brilhantes e uma armadura incandescente que simboliza a pureza e a autoridade divina. Sua presença é descrita como avassaladora, refletindo seu papel como o <strong>Arauto do Equilíbrio</strong>, um juiz supremo que pune os injustos e recompensa os virtuosos.
+                </p>
+                <ul>
+                    <li><strong>Símbolo</strong>: Um sol flamejante atravessado por uma espada, representando o poder da justiça iluminada pela verdade.</li>
+                    <li><strong>Título</strong>: "O Arauto do Equilíbrio", por sua dedicação à ordem e harmonia.</li>
+                </ul>
+                <h4><strong>- DOUTRINAS DE CADAMOR -</strong></h4>
+                <p>As doutrinas do culto moldam as leis e a ética de Paladium, promovendo valores inegociáveis:</p>
+                <ul>
+                    <li><strong>A Justiça é a Chama da Pureza</strong>: A verdade é como o fogo — purifica os corações e destrói o mal. Aqueles que violam as leis enfrentam punições severas e exemplares.</li>
+                    <li><strong>A Luz Expõe Todas as Sombras</strong>: O oculto não é tolerado; todas as ações e intenções devem ser julgadas sob a luz do sol, sem segredos ou mentiras.</li>
+                    <li><strong>Sacrifício pelo Bem Comum</strong>: O bem-estar coletivo está acima de desejos ou ambições individuais. A ordem e a harmonia são prioridades absolutas.</li>
+                </ul>
+                <h4><strong>- RITUAIS E FESTIVAIS -</strong></h4>
+                <p>O culto inclui práticas ritualísticas e celebrações que reforçam a fé e a união entre os cidadãos:</p>
+                <ul>
+                    <li><strong>Aurora de Cadamor</strong>: Um festival anual marcado por enormes fogueiras espalhadas pela cidade. O evento simboliza a <strong>purificação e renovação</strong> da sociedade, um momento de reflexão e devoção.</li>
+                    <li><strong>O Julgamento do Sol</strong>: Tribunais realizados ao ar livre, onde os acusados são julgados publicamente à luz do dia, reafirmando o princípio de transparência e justiça.</li>
+                    <li><strong>As Chamas do Perdão</strong>: Um ritual raro em que os inocentes devem atravessar brasas como prova de sua pureza e devoção. Apenas os verdadeiramente puros completam o rito sem ferimentos, um símbolo do perdão divino.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card card-terceiro" onclick="toggleCard(this)">
+        <h3>Cultura e Sociedade de Paladium</h3>
+        <p>Clique para saber mais sobre a cultura e sociedade de Paladium.</p>
+        <span class="arrow"><i class="fas fa-chevron-right"></i></span>
+        <div class="card-content">
+            <h4><strong>- ARQUITETURA E ARTE -</strong></h4>
+            <p>Paladium é uma cidade projetada para encarnar a glória de Cadamor, com construções imponentes e ricas em simbolismos religiosos.</p>
+            <ul>
+                <li><strong>Estilo Arquitetônico</strong>: Os edifícios exibem ornamentos em forma de chamas e espirais solares, reforçando a conexão com o sol. Mármore branco e detalhes dourados são amplamente usados, criando uma estética de pureza e majestade.</li>
+                <li><strong>Brasão da Cidade</strong>: Um sol flamejante cercado por espadas, representando justiça e proteção, está presente em monumentos, bandeiras e outros elementos urbanos.</li>
+            </ul>
+            <h4><strong>- MÚSICA E LITERATURA -</strong></h4>
+            <p>A música e a literatura são expressões culturais que exaltam os valores divinos e os heróis de Paladium.</p>
+            <ul>
+                <li><strong>Música</strong>: Canções tradicionais celebram a luz, a justiça e o poder de Cadamor, com melodias grandiosas e inspiradoras tocadas em festivais e cerimônias.</li>
+                <li><strong>Literatura</strong>: Poemas épicos e narrativas heroicas glorificam cavaleiros lendários e suas batalhas em nome de Cadamor, servindo tanto como entretenimento quanto como ensino moral.</li>
+            </ul>
+            <h4><strong>- PRECONCEITOS -</strong></h4>
+            <p>Apesar de avanços políticos e sociais, Paladium ainda enfrenta divisões internas.</p>
+            <ul>
+                <li><strong>Híbridos e Preconceito Religioso</strong>: Embora a escravidão dos híbridos tenha sido abolida, muitos cidadãos ainda os consideram inferiores. A religião de Cadamor é, por vezes, usada para justificar essa discriminação, perpetuando estereótipos que marginalizam os híbridos na sociedade.</li>
+            </ul>
+            <p>
+                A cultura de Paladium, com sua beleza arquitetônica e expressões artísticas, é tanto uma celebração da luz quanto um reflexo das tensões sociais subjacentes, revelando os desafios que a cidade enfrenta em sua busca por harmonia e justiça.
+            </p>
+        </div>
+    </div>
+    
+  
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
+

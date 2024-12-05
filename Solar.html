@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento Solar</title>
+    <link rel="icon" href="Imagens/Site_Icone.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #FF5733; /* Cor de texto mais vibrante */
+            background-color: #000000; /* Fundo preto */
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Estilo para o vídeo de fundo */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Garante que o vídeo fique atrás do conteúdo */
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8); /* Transparência ajustada para um fundo mais escuro */
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #B0B0B0; /* Cor mais suave para links */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #333333; /* Cor escura ao passar o mouse */
+        }
+        .content {
+            padding: 100px 20px;
+            margin-top: 60px;
+            z-index: 2;
+        }
+        .title {
+            font-size: 3em;
+            margin-top: 20px;
+            color: #FF5733; /* Cor vibrante para o título */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
+        }
+        .description {
+            font-size: 1.5em;
+            margin-top: 20px;
+            line-height: 1.6;
+            color: #FF5733; /* Cor vibrante */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
+        }
+        .element-info {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 87, 51, 0.7);
+        }
+        .element-info h3 {
+            font-size: 2.5em;
+            color: #FF5733;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .element-info p {
+            font-size: 1.3em;
+            color: #FFF;
+            line-height: 1.6;
+        }
+        .image-container {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .element-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.8); /* Sombra mais intensa para destacar a imagem */
+        }
+        .callout {
+            background-color: rgba(255, 87, 51, 0.8); /* Cor do callout */
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 87, 51, 0.5);
+        }
+        .callout h3 {
+            font-size: 2em;
+            color: #FFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .callout p {
+            font-size: 1.2em;
+            color: #FFF;
+            line-height: 1.6;
+        }
+        .footer {
+            background-color: #181818; /* Cor escura para o rodapé */
+            color: #FFF;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .deus-info {
+            margin-top: 50px;
+            background-color: #3E0C00; /* Cor mais escura para destacar */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 87, 51, 0.7);
+        }
+        .deus-info h2 {
+            font-size: 2.5em;
+            color: #FF5733; /* Cor vibrante */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+        }
+        .deus-info p {
+            font-size: 1.3em;
+            color: #FFF;
+            line-height: 1.6;
+        }
+        .deus-image {
+            width: 80%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop class="background-video">
+        <source src="Ima_El/videoplayback (1).mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+    </video>
+
+    <div class="navbar">
+        <a href="index.html">Início</a>
+        <a href="historia.html">História</a>
+        <a href="elementos.html">Elementos</a>
+        <a href="personagens.html">Personagens</a>
+    </div>
+
+    <div class="content">
+        <h1 class="title">Elemento Solar</h1>
+        <p class="description">Uma luminosidade mais intensa, uma tonalidade alaranjada ardente, as chamas transcendem a mera combustão e se tornam uma manifestação de chamas fortes que desafiam os limites da imaginação. O Elemento Solar é uma visão majestosa de fogo em sua forma mais impressionante...</p>
+
+        <!-- Informações do Elemento Solar -->
+        <div class="element-info">
+            <h3>Descrição do Elemento Solar</h3>
+            <p>O Elemento Solar é a manifestação pura do fogo, representando o calor do sol em seu estado mais formidável e indomável. Sua essência está ligada à destruição e à criação, ao calor que gera vida e ao fogo que consome tudo ao seu redor. Ele é reverenciado por sua beleza flamejante, mas temido por seu poder avassalador.</p>
+            <p>Ao dominar o Elemento Solar, o usuário tem acesso a um fogo que não apenas queima, mas também purifica, criando uma força destrutiva capaz de remodelar a realidade ao seu redor.</p>
+            <p>Este poder é temido e respeitado em toda a cidade de Paladium, onde seu fogo é visto tanto como uma força de purificação quanto de destruição, sendo a essência do fogo viva e constante no coração de todos.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="Ima_El/fogo2.jpg" alt="Elemento Solar" class="element-image">
+        </div>
+
+        <div class="callout">
+            <h3>O Desafio do Elemento Solar</h3>
+            <p>Dominar o Elemento Solar exige uma conexão profunda com o poder do fogo, enfrentando não apenas o calor, mas também os perigos da própria combustão, que pode consumir até mesmo os mais fortes entre seus usuários.</p>
+        </div>
+
+        <div class="deus-info">
+            <h2>Deus Cadamor: A Justiça Ardente</h2>
+            <p>Cadamor é o deus que personifica a justiça através do fogo. Ele é conhecido como o deus da chama purificadora e destrutiva, trazendo equilíbrio ao mundo ao consumir as impurezas com sua imensa força. Sua presença é sentida como uma onda de calor e luz, sendo um símbolo de renovação e de destruição simultânea.</p>
+            <p>O Deus Cadamor é venerado pelos habitantes de Paladium, que o reverenciam como o guardião da justiça. Seu poder é visto como necessário para manter o equilíbrio, pois ele consome o mal e aquece o coração dos justos. Sua aparência é a de um centauro flamejante, com uma armadura que brilha intensamente e um rosto vazio, sem traços, refletindo sua natureza impessoal e implacável. Sua imagem ressoa como a força de uma justiça imbatível, cheia de luz, mas capaz de consumir quem ousar se opor a ela.</p>
+            <div class="image-container">
+                <img src="Ima_El/Cadamor.jpg" alt="Deus Cadamor" class="deus-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Elemento Solar. Todos os direitos reservados.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo do RPG</title>
+    <link rel="icon" href="Imagens/Site_Icone.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1C1C1C;
+            color: #EDEDED;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #241E2B;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #EDEDED;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #4F4F4F;
+        }
+        .content {
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        .title {
+            font-size: 2.5em;
+            margin-top: 60px;
+            color: #EDEDED;
+        }
+        .description {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #CCCCCC;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: #241E2B;
+            color: #EDEDED;
+            padding: 20px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .message {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FF4500;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 1000;
+        }
+        .message.show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function showDevelopmentMessage() {
+            // Mostra a mensagem
+            const message = document.getElementById('development-message');
+            message.classList.add('show');
+
+            // Esconde a mensagem após 3 segundos
+            setTimeout(function() {
+                message.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="historia.html">História</a>
+        <a href="elementos.html">Elementos</a>
+        <a href="javascript:void(0);" onclick="showDevelopmentMessage()">Mundo</a>
+        <a href="personagens.html">Personagens</a>
+    </div>
+    <div class="content">
+        <h1 class="title">Bem-vindo ao Universo do Wuitalur</h1>
+        <p class="description">Explore a história, os elementos e os personagens do mundo do RPG.</p>
+        <div class="cards">
+            <div class="card" onclick="location.href='historia.html'">História</div>
+            <div class="card" onclick="location.href='elementos.html'">Elementos</div>
+            <div class="card" onclick="showDevelopmentMessage()">Mundo</div>
+            <div class="card" onclick="location.href='personagens.html'">Personagens</div>
+        </div>
+        <!-- Mensagem de desenvolvimento -->
+        <div id="development-message" class="message">Ainda está sendo desenvolvido!</div>
+    </div>
+</body>
+</html>
